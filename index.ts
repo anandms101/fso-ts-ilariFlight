@@ -1,0 +1,7 @@
+import express from "express";
+const app = express();
+app.use(express.json);
+const port = 3000;
+
+app.get("/ping", (_req, res) => res.send("pong"));
+app.listen(port, () => console.log(`Example app listening on port ${port}!`));
